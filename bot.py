@@ -10,7 +10,7 @@ from tensorflow.keras.callbacks import EarlyStopping, ModelCheckpoint
 import time
 
 # Set up Alpha Vantage API
-API_KEY = 'CRO3OEE6B1SEB9EY'
+API_KEY = 'ENTER_YOUR_API_KEY'
 ts = TimeSeries(key=API_KEY, output_format='pandas')
 
 # Download historical stock data
