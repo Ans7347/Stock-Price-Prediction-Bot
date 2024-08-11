@@ -3,7 +3,7 @@
 #include <vector>
 #include <string>
 
-// Function to read predictions from a file
+
 std::vector<double> read_predictions(const std::string& filename) {
     std::vector<double> predictions;
     std::ifstream file(filename);
@@ -14,7 +14,6 @@ std::vector<double> read_predictions(const std::string& filename) {
     return predictions;
 }
 
-// Simple trading strategy
 void trading_strategy(const std::vector<double>& predictions, double threshold) {
     double last_prediction = predictions[0];
     for (size_t i = 1; i < predictions.size(); ++i) {
@@ -28,11 +27,7 @@ void trading_strategy(const std::vector<double>& predictions, double threshold) 
 }
 
 int main() {
-    // Load predictions made by the TensorFlow model
     std::vector<double> predictions = read_predictions("predictions.txt");
-
-    // Execute the trading strategy
     trading_strategy(predictions, 0.01);
-
     return 0;
 }
